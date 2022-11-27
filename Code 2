@@ -1,0 +1,14 @@
+%Nomer 2
+W = abs(fft(w));
+W1 = W(1:floor(length(W)/2)+1);
+f = (0:(length(W)/2))*Fs/length(W);
+
+figure(2);
+subplot(2,1,1),
+plot(nT,w)
+xlabel('Waktu(s)');
+title('Sinyal Gabungan');
+subplot(2,1,2),
+plot(f,W1)
+xlabel('Frekuensi(Hz)');
+title('Sinyal Gabungan Dalam Domain Frekuensi');
