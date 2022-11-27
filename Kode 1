@@ -1,0 +1,32 @@
+Fs=32000;
+nT=0:1/Fs:0.004;
+
+%parameter---- 
+A=500;
+B=9000;
+C=14000;
+At=sin(2*pi*A*nT);
+Bt=sin(2*pi*B*nT);
+Ct=sin(2*pi*C*nT);
+w=At+Bt+Ct;
+
+figure(1);
+subplot(2,2,1),
+plot(nT,At)
+xlabel('Waktu(s)');
+title('Frekuensi Rendah sin(2*pi*600*nT)');
+
+subplot(2,2,2),
+plot(nT,Bt)
+xlabel('Waktu(s)');
+title('Frekuensi Menengah sin(2*pi*8000*nT)');
+
+subplot(2,2,3),
+plot(nT,Ct)
+xlabel('Waktu(s)');
+title('Frekuensi Tinggi sin(2*pi*13000*nT)');
+
+subplot(2,2,4),
+plot(nT,w)
+xlabel('Waktu(s)');
+title('Sinyal Gabungan');
